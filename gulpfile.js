@@ -8,8 +8,6 @@ const {
 
 // clean
 const del = require('del');
-// rename
-const rename = require('gulp-rename');
 // browserSync
 const browserSync = require('browser-sync').create();
 // error
@@ -18,15 +16,13 @@ const notify = require('gulp-notify');
 
 // styles
 const less = require('gulp-less');
-// const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('autoprefixer');
-// const gcmq = require('gulp-group-css-media-queries');
+const gcmq = require('gulp-group-css-media-queries');
 
 const postcss = require('gulp-postcss');
 const postLess = require('postcss-less');
 const postImport = require('postcss-import');
 const postUrl = require('postcss-url');
-const postMediaMinMax = require('postcss-media-minmax');
 const csso = require('postcss-csso')
 
 // scripts
@@ -34,7 +30,6 @@ const babel = require('gulp-babel');
 const minify = require('gulp-minify');
 
 // html
-const htmlmin = require('gulp-htmlmin');
 const nunjucks = require('gulp-nunjucks');
 
 const paths = {
@@ -119,15 +114,11 @@ function styles() {
 			errorHandler: onError
 		}))
 		.pipe(less())
+		.pipe(gcmq())
 		.pipe(postcss([
-			postMediaMinMax(),
 			csso(),
 			autoprefixer(),
 		]))
-		.pipe(rename({
-			basename: 'main',
-			suffix: '.min'
-		}))
 		.pipe(dest(paths.styles.dest, {
 			sourcemaps: "."
 		}))
@@ -164,10 +155,6 @@ function scripts() {
 function html() {
 	return src(paths.html.src)
 		.pipe(nunjucks.compile())
-		.pipe(htmlmin({
-			removeComments: false,
-			collapseWhitespace: true
-		}))
 		.pipe(dest(paths.html.dest))
 		.pipe(browserSync.stream());
 }
@@ -205,16 +192,15 @@ exports.html = html;
 // server
 exports.server = server;
 
-exports.build = series(clean, copy, parallel(styles, scripts, html))
+exports.build = series(clean, copy, scripts, parallel(styles, html))
 
-exports.default = series(clean, copy, parallel(scripts, styles, html), server);
+exports.default = series(clean, copy, scripts, parallel(styles, html), server);
 
 /**
  * Дополнительные задачи
  */
 // img
 const squoosh = require('gulp-libsquoosh');
-const gulpSquoosh = require("gulp-squoosh");
 const svgSprite = require('gulp-svg-sprite');
 const svgmin = require('gulp-svgmin');
 // fonts
@@ -233,28 +219,6 @@ function optiImg() {
 		})
 		.pipe(squoosh())
 		.pipe(dest(paths.src));
-}
-
-function createWebp() {
-	return src(paths.img.resource + "/**/*.{jpg,png}")
-		.pipe(
-			squoosh({
-				webp: {}
-			})
-		)
-		.pipe(dest(paths.img.src));
-}
-
-function createAvif() {
-	return src(paths.img.resource + "/**/*.{jpg,png}")
-		.pipe(
-			gulpSquoosh({
-				encodeOptions: {
-					avif: {}
-				}
-			})
-		)
-		.pipe(dest(paths.img.src));
 }
 
 function sprite() {
@@ -279,10 +243,6 @@ function fonts() {
 		.pipe(dest(paths.fonts.src));
 }
 
-// createWebp
-exports.createWebp = createWebp;
-// createAvif
-exports.createAvif = createAvif;
 // optiImg
 exports.optiImg = optiImg;
 // sprite
