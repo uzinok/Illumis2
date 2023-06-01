@@ -30,3 +30,141 @@ img {
 .db {
 	display: block;
 }
+
+.checklist {
+	display: grid;
+}
+
+.checklist-inner {
+	margin-top: 16px;
+	padding: 8px 16px 24px;
+	background-color: rgba(0, 0, 0, 0.06);
+
+	@media (min-width: @min-lg) {
+		padding: 24px 54px 40px;
+	}
+
+	&::before {
+		content: '';
+		display: block;
+		width: 160px;
+		height: 16px;
+		margin-top: -24px;
+		margin-left: -16px;
+		background-color: rgba(0, 0, 0, 0.06);
+		mask-image: url(../../img/checklist-before.svg);
+		mask-size: contain;
+		mask-repeat: no-repeat;
+		mask-position: left bottom;
+
+		@media (min-width: @min-lg) {
+			width: 240px;
+			height: 24px;
+			margin-top: -48px;
+			margin-left: -54px;
+		}
+	}
+}
+
+.prod-wrap {
+	width: fit-content;
+	margin-bottom: 40px;
+	text-align: center;
+
+	@media (min-width: @min-lg) {
+		margin-bottom: 102px;
+	}
+
+	@media (max-width: @max-sm) {
+		margin: 0 auto 40px;
+	}
+
+	& img {
+		display: block;
+		margin: 0 auto 20px;
+
+		@media (min-width: @min-lg) {
+			margin-bottom: 49px;
+		}
+	}
+}
+
+.button {
+	display: inline-block;
+	padding: 30px 48px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	color: #fff;
+	text-decoration: none;
+	background-color: #EC1C82;
+	border-radius: 136px;
+	box-shadow: 0px 6px 30px #EC1C82;
+	transition: box-shadow var(--transition-duration) var(--transition-function);
+
+	@media (min-width: @min-lg) {
+		padding: 40px 72px;
+		font-size: 24px;
+		line-height: 29px;
+	}
+
+	&:hover {
+		box-shadow: 0 0 0 transparent;
+	}
+}
+
+.main__tag {
+	margin-bottom: 33px;
+
+	@media (min-width: @min-lg) {
+		margin-bottom: 84px;
+	}
+
+	& .container {
+		display: flex;
+	}
+
+	& h2 {
+		margin: 0;
+	}
+}
+
+.main__tag-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0 0 16px;
+	padding: 0;
+	list-style-type: none;
+	gap: 8px;
+
+	@media (min-width: @min-lg) {
+		margin-left: 24px;
+	}
+}
+
+.main__tag-link {
+	display: block;
+	padding: 15px 23px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	color: #000000;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 0.04em;
+	background-color: rgba(0, 0, 0, 0.1);
+	background-clip: padding-box;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	transition: background-color var(--transition-duration) var(--transition-function), color var(--transition-duration) var(--transition-function);
+
+	@media (min-width: @min-lg) {
+		padding: 23px 31px;
+		font-size: 16px;
+		line-height: 19px;
+	}
+
+	&:hover {
+		color: #EC1C82;
+		background-color: #ffffff;
+	}
+}
