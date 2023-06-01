@@ -36,7 +36,6 @@
 		"gulp-svgmin": "^4.1.0",
 		"gulp-ttf2woff": "^1.1.1",
 		"gulp-ttf2woff2": "^4.0.1",
-		"postcss-csso": "^6.0.0",
 		"postcss-import": "^14.0.2",
 		"postcss-less": "^6.0.0",
 		"postcss-url": "^10.1.3"

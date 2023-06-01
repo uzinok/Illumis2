@@ -23,7 +23,6 @@ const postcss = require('gulp-postcss');
 const postLess = require('postcss-less');
 const postImport = require('postcss-import');
 const postUrl = require('postcss-url');
-const csso = require('postcss-csso')
 
 // scripts
 const babel = require('gulp-babel');
@@ -116,7 +115,6 @@ function styles() {
 		.pipe(less())
 		.pipe(gcmq())
 		.pipe(postcss([
-			csso(),
 			autoprefixer(),
 		]))
 		.pipe(dest(paths.styles.dest, {
