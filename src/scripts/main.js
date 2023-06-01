@@ -1,8 +1,9 @@
 const headerScrollList = document.querySelector('.header__scroll-list');
 const headerScrollItems = document.querySelectorAll('.header__scroll-list li');
 const headerButtonScroll = document.querySelector('.header__button-scroll');
-let headerScrollListWidth = headerScrollList.clientWidth;
+let headerScrollListWidth = document.querySelector('.header__scroll-list-wrap').clientWidth;
 let headerScrollItemsWidth = 0;
+let translateX = 0;
 
 console.log(headerScrollItems.length);
 if (window.innerWidth <= 1040) {
@@ -13,8 +14,8 @@ if (window.innerWidth <= 1040) {
 	if (headerScrollItemsWidth > headerScrollListWidth) {
 		headerButtonScroll.style.display = 'block';
 		headerButtonScroll.addEventListener('click', () => {
-			console.log(headerScrollListWidth);
-			headerScrollList.style.transform = `translateX(-${headerScrollListWidth})px`;
+			console.log(`translateX(-${headerScrollListWidth}px)`);
+			headerScrollList.style.transform = `translateX(-${headerScrollListWidth}px)`;
 		});
 	}
 }

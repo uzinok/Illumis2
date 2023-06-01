@@ -262,14 +262,18 @@
 	}
 }
 
+.header__scroll-list-wrap {
+	overflow: hidden;
+}
+
 .header__scroll-list {
 	display: grid;
 	grid-template-columns: repeat(8, auto);
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
 	list-style-type: none;
 	column-gap: 16px;
+	transition: transform var(--transition-duration) var(--transition-function);
 
 	@media (min-width: 1040px) {
 		column-gap: 31px;
