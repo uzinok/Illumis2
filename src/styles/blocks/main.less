@@ -101,13 +101,8 @@ span[class|="main__header-meta"] {
 
 .main__header-meta-h {
 	margin-left: auto;
-
-	&::before {
-		background-image: url(../../img/heart.svg);
-	}
 }
 
-.main__header-meta-h,
 .main__header-meta-c {
 	&:hover {
 		&::before {
@@ -134,10 +129,6 @@ span[class|="main__header-meta"] {
 		opacity: 0;
 		transition: opacity var(--transition-duration) var(--transition-function);
 	}
-}
-
-.main__header-meta-h::after {
-	background-image: url(../../img/heart-fill.svg);
 }
 
 .main__header-meta-c::after {
@@ -236,6 +227,7 @@ span[class|="main__header-meta"] {
 	}
 
 	& h2 {
+		margin-top: 0;
 		font-weight: 500;
 		font-size: 22px;
 		line-height: 30px;

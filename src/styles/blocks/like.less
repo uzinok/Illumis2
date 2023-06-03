@@ -1,0 +1,39 @@
+.like {
+	position: relative;
+	padding: 0;
+	padding-left: 24px;
+	background-color: transparent;
+	border: 0;
+	appearance: none;
+	width: fit-content;
+
+	@media (min-width: @min-md) {
+		padding-left: 26px;
+	}
+
+	&::after,
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		display: block;
+		width: 16px;
+		height: 14px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		transform: translateY(-50%);
+		transition: opacity var(--transition-duration) var(--transition-function);
+		background-image: url(../../img/heart.svg);
+	}
+
+	&::after {
+		background-image: url(../../img/heart-fill.svg);
+		opacity: 0;
+	}
+
+	&:hover::after {
+		opacity: 1;
+	}
+}

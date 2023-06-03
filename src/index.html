@@ -75,7 +75,7 @@
 				<span class="main__header-meta-t">15 May 2023, 10:49</span>
 				<span class="main__header-meta-w">170,653</span>
 				<span class="main__header-meta-c">21</span>
-				<span class="main__header-meta-h">184</span>
+				<button type="button" class="main__header-meta-h like">184</button>
 			</p>
 			<nav class="main__header-nav">
 				<ul class="main__header-nav-list">
@@ -241,39 +241,45 @@
 				</h2>
 			</div>
 
-			<ul class="comments__list">
+			<ul class="comments__list comments__list-container">
 				<li>
 					<div class="comments__meta">
-						<div class="ava">m</div>
+						<div class="ava"><img src="./img/ava-1.jpg" alt="#" width="48" height="48"></div>
 						<span class="comments__author">Лариса Куцова</span><span class="comments__time">09:20, 23 May</span>
-						<span class="like">23</span>
+						<button type="button" class="comments__like like">23</button>
 					</div>
 					<p>Спасибо большое за статью, заказала себе сразу 4 упаковки!</p>
 				</li>
 
 				<li>
 					<div class="comments__meta">
-						<div class="ava">o</div>
+						<div class="ava">
+							<img src="./img/ava-2.jpg" alt="#" width="48" height="48">
+						</div>
 						<span class="comments__author">Оля Орлова</span><span class="comments__time">10:40, 23 May</span>
-						<span class="like">1</span>
+						<button type="button" class="comments__like like">1</button>
 					</div>
 					<p>Кто- нибудь пробовал, можете поделиться результатом?</p>
 				</li>
 
 				<li>
 					<div class="comments__meta">
-						<div class="ava">и</div>
+						<div class="ava">
+							<img src="./img/ava-3.jpg" alt="#" width="48" height="48">
+						</div>
 						<span class="comments__author">Инга Грошева</span><span class="comments__time">11:00, 23 May</span>
-						<span class="like">208</span>
+						<button type="button" class="comments__like like">208</button>
 					</div>
 					<p>Есть люди которые считают, что проблема ПМС выдуманная. Честно говоря, пару лет назад я и сама так думала, пока не случился гормональный сбой и я не ощутила все ужасы ПМС. Боли, мигрени, бессонница, депрессия, расстройство желудка… Я не представляла, как работать из-за постоянной слабости и ощущения, что в любой момент я могу потерять сознание. Но теперь, когда я попробовала Illumis я забыла, что такое ПМС.</p>
 				</li>
 
 				<li>
 					<div class="comments__meta">
-						<div class="ava">г</div>
+						<div class="ava">
+							<img src="./img/ava-4.jpg" alt="#" width="48" height="48">
+						</div>
 						<span class="comments__author">Галкина Марина</span><span class="comments__time">11:20, 23 May</span>
-						<span class="like">163</span>
+						<button type="button" class="comments__like like">163</button>
 					</div>
 					<p>Отличное средство! Через два месяца приема Illumis я заметила значительное улучшение своего состояния и снижение тревоги и слабости.</p>
 					<img src="./img/img-7.jpg" alt="#" width="280" height="280" loading="lazy">
@@ -281,25 +287,32 @@
 
 				<li>
 					<div class="comments__meta">
-						<div class="ava">В</div>
+						<div class="ava">
+							<img src="./img/ava-5.jpg" alt="#" width="48" height="48">
+						</div>
 						<span class="comments__author">Вероника Григорьева</span><span class="comments__time">11:20, 23 May</span>
-						<span class="like">10</span>
+						<button type="button" class="comments__like like">10</button>
 					</div>
 					<p>У меня такой вопрос,на днях была у гинеколога и задала вопрос про бурный ПМС,что мне принимать чтобы симптомы снять,или лечить.Он сказал у вас гормоны в норме, я не могу вам назначить лечение. Но синдром у меня никуда не делся.Он не контролируемый(((В работе сказывается,и домашним достается.Подскажите кто знает что можно принимать или куда обратиться если гинеколог не увидел причину?</p>
 				</li>
 
 				<li>
 					<div class="comments__meta">
-						<div class="ava">Б</div>
+						<div class="ava">
+							<img src="./img/ava-6.jpg" alt="#" width="48" height="48">
+						</div>
 						<span class="comments__author">Березина Алиса</span><span class="comments__time">15:00, 24 May</span>
-						<span class="like">89</span>
+						<button type="button" class="comments__like like">89</button>
 					</div>
 					<p>ПМС был мои адом… За неделю до начала цикла начинался сильный беспричинный голод и перепады настроения, которые сопровождались плаксивостью, раздражительностью, нетерпеливостью. Еще я была разбита… С утра было много энергии, спустя примерно два-три часа после пробуждения наступала дикая слабость, невозможно поднять конечности или встать кровати. Много лет я боролась с ПМС, но мне ничего не помогало. Недавно я попала к хорошему специалисту на прием, он то и посоветовал это средство. Я не верила особо, потому что много чего пробовала в своей жизни, но случилось чудо! ПМС как ветром сдуло! Так что смело пробуйте, если вам знакомом мое состояние…</p>
 					<img src="./img/img-8.jpg" alt="#" width="280" height="280" loading="lazy">
 				</li>
 			</ul>
 
-			<a href="#" class="button">Заказать Illumis</a>
+			<div class="container">
+				<a href="#" class="button">Заказать Illumis</a>
+			</div>
+
 		</section>
 		<section class="continue">
 			<div class="container">
