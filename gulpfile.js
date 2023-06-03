@@ -30,6 +30,7 @@ const minify = require('gulp-minify');
 
 // html
 const nunjucks = require('gulp-nunjucks');
+const fileinclude = require('gulp-file-include');
 
 const paths = {
 	dest: 'dest',
@@ -153,6 +154,10 @@ function scripts() {
 function html() {
 	return src(paths.html.src)
 		.pipe(nunjucks.compile())
+		.pipe(fileinclude({
+			prefix: '//',
+			basepath: './'
+		}))
 		.pipe(dest(paths.html.dest))
 		.pipe(browserSync.stream());
 }
@@ -160,7 +165,7 @@ function html() {
 // watch
 function watchFiles() {
 	watch(paths.styles.watch, styles)
-	watch(paths.scripts.watch, scripts)
+	watch(paths.scripts.watch, series(scripts, html))
 	watch(paths.html.watch, html)
 }
 

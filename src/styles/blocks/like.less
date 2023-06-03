@@ -6,6 +6,7 @@
 	border: 0;
 	appearance: none;
 	width: fit-content;
+	transition: color var(--transition-duration) var(--transition-function);
 
 	@media (min-width: @min-md) {
 		padding-left: 26px;
@@ -36,4 +37,12 @@
 	&:hover::after {
 		opacity: 1;
 	}
+}
+
+.like--down {
+	color: #EC1C82;
+}
+
+.like--down::after {
+	opacity: 1;
 }

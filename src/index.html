@@ -9,6 +9,9 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 	<link rel="stylesheet" href="styles/main.css">
+	<script>
+		//include('dest/scripts/main.min.js')
+	</script>
 </head>
 
 <body>
@@ -49,6 +52,9 @@
 			<div class="header__container">
 				<p class="header__green-text">Mental well-being</p>
 				<div class="header__scroll-list-wrap">
+					<button class="header__button-scroll-end" type="button">
+						<span class="visually-hidden">More</span>
+					</button>
 					<ul class="header__scroll-list">
 						<li><a href="#">Life</a></li>
 						<li><a href="#">Youth in Focus</a></li>
@@ -59,10 +65,10 @@
 						<li><a href="#">Parenting</a></li>
 						<li><a href="#">Crisis Support</a></li>
 					</ul>
+					<button class="header__button-scroll" type="button">
+						<span class="visually-hidden">More</span>
+					</button>
 				</div>
-				<button class="header__button-scroll" type="button">
-					<span class="visually-hidden">More</span>
-				</button>
 			</div>
 		</div>
 	</header>
@@ -74,19 +80,19 @@
 			<p class="main__header-meta">
 				<span class="main__header-meta-t">15 May 2023, 10:49</span>
 				<span class="main__header-meta-w">170,653</span>
-				<span class="main__header-meta-c">21</span>
+				<span class="main__header-meta-c" data-href="comments" role="link">21</span>
 				<button type="button" class="main__header-meta-h like">184</button>
 			</p>
 			<nav class="main__header-nav">
 				<ul class="main__header-nav-list">
 					<li>
-						<button role="link" type="button" data-href="#">Симптомы</button>
+						<button role="link" type="button" data-href="symptoms">Симптомы</button>
 					</li>
 					<li>
-						<button role="link" type="button" data-href="#">Лечение</button>
+						<button role="link" type="button" data-href="treatment">Лечение</button>
 					</li>
 					<li>
-						<button role="link" type="button" data-href="#">Безопасность</button>
+						<button role="link" type="button" data-href="safety">Безопасность</button>
 					</li>
 				</ul>
 			</nav>
@@ -95,13 +101,13 @@
 		<section>
 			<div class="container">
 				<p>
-					Если мучает непрекращающееся желание съесть сладкую, солёную или жирную пищу, вокруг всё раздражает, болит голова, раздувается живот и совсем нет сил на привычные дела — начался предменструальный синдром. Существует около 200 симптомов ПМС, и, по оценкам гинекологов, по крайней мере один из них испытывают 90 % женщин.
+					Если мучает непрекращающееся желание съесть сладкую, солёную или жирную пищу, вокруг всё раздражает, болит голова, раздувается живот и совсем нет сил на привычные дела — начался предменструальный синдром. Существует около 200 симптомов ПМС, и, по оценкам гинекологов, по крайней мере один из них испытывают 90% женщин.
 				</p>
 				<p>
 					Алина Марсад, гинеколог-эндокринолог, руководитель Семейной академии здоровья расскажет, как навсегда забыть о ПМС.
 				</p>
 				<img src="./img/img-2.jpg" alt="#" loading="lazy" width="828" height="512">
-				<h2>
+				<h2 id="symptoms">
 					Симптомы ПМС
 				</h2>
 				<p>
@@ -145,7 +151,7 @@
 			</div>
 		</section>
 
-		<section>
+		<section id="treatment">
 			<div class="container">
 				<h2>
 					Что делать, если ПМС не даёт нормально жить?
@@ -200,7 +206,7 @@
 					Компоненты препарата, проходя через желудочно-кишечный тракт, не распадаются, а проникают через клеточную мембрану к яичникам и воздействуют на их клетки. Действие препарата от ПМС основано на улучшении естественных процессов в организме и стимуляции собственной выработки оптимального количества гормонов во всех фазах менструального цикла.
 				</p>
 				<img src="./img/img-5.jpg" alt="#" loading="lazy" width="656" height="448">
-				<p>
+				<p id="safety">
 					Главное, что Illumis полностью безопасен. Это подтвердили тестирования, которые проводились в независимых лабораториях, где продукт получил сертификаты анализа (COA).
 				</p>
 				<p>
@@ -234,7 +240,7 @@
 			</div>
 		</section>
 
-		<section class="comments">
+		<section class="comments" id="comments">
 			<div class="container">
 				<h2>
 					Комментарии <span>21</span>
@@ -244,8 +250,10 @@
 			<ul class="comments__list comments__list-container">
 				<li>
 					<div class="comments__meta">
-						<div class="ava"><img src="./img/ava-1.jpg" alt="#" width="48" height="48"></div>
-						<span class="comments__author">Лариса Куцова</span><span class="comments__time">09:20, 23 May</span>
+						<div class="ava">
+							<img src="./img/ava-1.jpg" alt="#" width="48" height="48">
+						</div>
+						<span class="comments__author">Лариса Куцова</span><span class="comments__time">09:20, <script>dtime(-2)</script></span>
 						<button type="button" class="comments__like like">23</button>
 					</div>
 					<p>Спасибо большое за статью, заказала себе сразу 4 упаковки!</p>
@@ -254,9 +262,9 @@
 				<li>
 					<div class="comments__meta">
 						<div class="ava">
-							<img src="./img/ava-2.jpg" alt="#" width="48" height="48">
+						<img src="./img/ava-2.jpg" alt="#" width="48" height="48">
 						</div>
-						<span class="comments__author">Оля Орлова</span><span class="comments__time">10:40, 23 May</span>
+						<span class="comments__author">Оля Орлова</span><span class="comments__time">10:40, <script>dtime(-2)</script></span>
 						<button type="button" class="comments__like like">1</button>
 					</div>
 					<p>Кто- нибудь пробовал, можете поделиться результатом?</p>
@@ -267,7 +275,7 @@
 						<div class="ava">
 							<img src="./img/ava-3.jpg" alt="#" width="48" height="48">
 						</div>
-						<span class="comments__author">Инга Грошева</span><span class="comments__time">11:00, 23 May</span>
+						<span class="comments__author">Инга Грошева</span><span class="comments__time">11:00, <script>dtime(-2)</script></span>
 						<button type="button" class="comments__like like">208</button>
 					</div>
 					<p>Есть люди которые считают, что проблема ПМС выдуманная. Честно говоря, пару лет назад я и сама так думала, пока не случился гормональный сбой и я не ощутила все ужасы ПМС. Боли, мигрени, бессонница, депрессия, расстройство желудка… Я не представляла, как работать из-за постоянной слабости и ощущения, что в любой момент я могу потерять сознание. Но теперь, когда я попробовала Illumis я забыла, что такое ПМС.</p>
@@ -278,7 +286,7 @@
 						<div class="ava">
 							<img src="./img/ava-4.jpg" alt="#" width="48" height="48">
 						</div>
-						<span class="comments__author">Галкина Марина</span><span class="comments__time">11:20, 23 May</span>
+						<span class="comments__author">Галкина Марина</span><span class="comments__time">11:20, <script>dtime(-2)</script></span>
 						<button type="button" class="comments__like like">163</button>
 					</div>
 					<p>Отличное средство! Через два месяца приема Illumis я заметила значительное улучшение своего состояния и снижение тревоги и слабости.</p>
@@ -290,7 +298,7 @@
 						<div class="ava">
 							<img src="./img/ava-5.jpg" alt="#" width="48" height="48">
 						</div>
-						<span class="comments__author">Вероника Григорьева</span><span class="comments__time">11:20, 23 May</span>
+						<span class="comments__author">Вероника Григорьева</span><span class="comments__time">11:20, <script>dtime(-2)</script></span>
 						<button type="button" class="comments__like like">10</button>
 					</div>
 					<p>У меня такой вопрос,на днях была у гинеколога и задала вопрос про бурный ПМС,что мне принимать чтобы симптомы снять,или лечить.Он сказал у вас гормоны в норме, я не могу вам назначить лечение. Но синдром у меня никуда не делся.Он не контролируемый(((В работе сказывается,и домашним достается.Подскажите кто знает что можно принимать или куда обратиться если гинеколог не увидел причину?</p>
@@ -301,7 +309,7 @@
 						<div class="ava">
 							<img src="./img/ava-6.jpg" alt="#" width="48" height="48">
 						</div>
-						<span class="comments__author">Березина Алиса</span><span class="comments__time">15:00, 24 May</span>
+						<span class="comments__author">Березина Алиса</span><span class="comments__time">15:00, <script>dtime(-1)</script></span>
 						<button type="button" class="comments__like like">89</button>
 					</div>
 					<p>ПМС был мои адом… За неделю до начала цикла начинался сильный беспричинный голод и перепады настроения, которые сопровождались плаксивостью, раздражительностью, нетерпеливостью. Еще я была разбита… С утра было много энергии, спустя примерно два-три часа после пробуждения наступала дикая слабость, невозможно поднять конечности или встать кровати. Много лет я боролась с ПМС, но мне ничего не помогало. Недавно я попала к хорошему специалисту на прием, он то и посоветовал это средство. Я не верила особо, потому что много чего пробовала в своей жизни, но случилось чудо! ПМС как ветром сдуло! Так что смело пробуйте, если вам знакомом мое состояние…</p>
@@ -314,6 +322,7 @@
 			</div>
 
 		</section>
+
 		<section class="continue">
 			<div class="container">
 				<h2>
@@ -324,7 +333,7 @@
 						<a href="#" class="continue__link">
 							<img src="./img/continue-1.jpg" alt="#" width="280" height="175" loading="lazy">
 							<h3>Medicinal Cannabis Helps Cancer Pain</h3>
-							<p>19 May • 53 comments</p>
+							<p><script>dtime(-5)</script> • 53 comments</p>
 						</a>
 					</li>
 
@@ -332,7 +341,7 @@
 						<a href="#" class="continue__link">
 							<img src="./img/continue-2.jpg" alt="#" width="280" height="175" loading="lazy">
 							<h3>14 PMS Life Hacks to Beat the Bloat</h3>
-							<p>21 May • 304 comments</p>
+							<p><script>dtime(-9)</script> • 304 comments</p>
 						</a>
 					</li>
 
@@ -340,7 +349,7 @@
 						<a href="#" class="continue__link">
 							<img src="./img/continue-3.jpg" alt="#" width="280" height="175" loading="lazy">
 							<h3>8 PMS Comments We Never Want to Hear</h3>
-							<p>14 May • 51 comments</p>
+							<p><script>dtime(-12)</script> • 51 comments</p>
 						</a>
 					</li>
 
@@ -348,7 +357,7 @@
 						<a href="#" class="continue__link">
 							<img src="./img/continue-4.jpg" alt="#" width="280" height="175" loading="lazy">
 							<h3>Detox. A General Cleaning of the Body</h3>
-							<p>5 May • 97 comments</p>
+							<p><script>dtime(-20)</script> • 97 comments</p>
 						</a>
 					</li>
 				</ul>
@@ -356,16 +365,23 @@
 		</section>
 	</main>
 	<footer class="footer">
+
 		<div class="footer__container">
-			<div><a href="#" class="footer__logo">
-				<img src="./img/logo-footer.svg" alt="#">
-				Healthlife Media
-			</a>
+			<div>
+				<a href="#" class="footer__logo">
+					<img src="./img/logo-footer.svg" alt="#" width="26" height="26" loading="lazy">
+					Healthlife Media
+				</a>
 			</div>
-			<p class="footer__b-lain">
+			<p>
 				© 2023 Healthlife Media LLC. All rights reserved. Our website services, content, and products are for informational purposes only. Healthlife Media does not provide medical advice, diagnosis, or treatment. <a href="">See additional information.</a>
 			</p>
-			<ul class="footer__list footer__b-lain">
+		</div>
+
+		<div class="footer__line"></div>
+
+		<div class="footer__container">
+			<ul class="footer__list">
 				<li><a href="#">About Us</a></li>
 				<li><a href="#">Contact Us</a></li>
 				<li><a href="#">Privacy Policy</a></li>
@@ -375,6 +391,11 @@
 				<li><a href="#">Content Integrity</a></li>
 				<li><a href="#">Newsletters</a></li>
 			</ul>
+		</div>
+
+		<div class="footer__line"></div>
+
+		<div class="footer__container">
 			<ul class="footer__social">
 				<li>
 					<a href="#" class="footer__social-link footer__social-link--tiktok">
@@ -410,7 +431,7 @@
 		</div>
 	</footer>
 
-	<script src="./scripts/main.js"></script>
+	<!-- <script src="./scripts/main.js"></script> -->
 </body>
 
 </html>

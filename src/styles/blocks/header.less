@@ -130,11 +130,11 @@
 				position: absolute;
 				top: 60px;
 				left: 0;
+				z-index: 2;
 				display: block;
 				width: 100%;
 				padding: 20px;
 				background-color: #000;
-				z-index: 1;
 			}
 		}
 	}
@@ -303,11 +303,17 @@
 	}
 }
 
+.header__scroll-list-wrap {
+	position: relative;
+}
+
+.header__button-scroll-end,
 .header__button-scroll {
-	display: none;
 	position: absolute;
 	top: 0;
 	right: 0;
+	z-index: 1;
+	display: none;
 	width: 56px;
 	height: 100%;
 	padding: 0;
@@ -317,4 +323,9 @@
 	background-position: 60% center;
 	border: 0;
 	appearance: none;
+}
+
+.header__button-scroll-end {
+	left: 0;
+	transform: scale(-1, 1);
 }
