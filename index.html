@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<!-- удалить -->
+	<meta name="robots" content="noindex, nofollow" />
+	<!-- удалить -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Illumis</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="styles/main.css">
+	<script>
+		"use strict";function dtime(e){var t=new Date;t.setDate(t.getDate()+e);document.write(t.toLocaleString("en-US",{month:"long",day:"numeric"}))}function headerSlider(){var e=document.querySelector(".header__scroll-list"),t=document.querySelectorAll(".header__scroll-list li"),n=document.querySelector(".header__button-scroll"),l=document.querySelector(".header__button-scroll-end"),r=document.querySelector(".header__scroll-list-wrap").clientWidth,i=0,o=0;if(e.style.transform="translateX(0px)",l.style.display="none",window.innerWidth<=1040){i=16*t.length;for(var s=0;s<t.length;s++)i+=t[s].clientWidth;i>=r?(n.style.display="block",n.addEventListener("click",function(){(o+=r)>=i-r&&(o=i-r,n.style.display="none"),e.style.transform="translateX(-".concat(o,"px)"),l.style.display="block"}),l.addEventListener("click",function(){(o-=r)<=0&&(l.style.display="none",o=0),n.style.display="block",e.style.transform="translateX(-".concat(o,"px)")})):(n.style.display="none",l.style.display="none")}}window.addEventListener("load",function(){headerSlider(),window.addEventListener("resize",headerSlider);var e=document.querySelector(".main__header-meta-w"),t=170.653;e.innerText=t,window.setInterval(function(){var n;t+=.004,e.innerText=(n=t,Number.parseFloat(n).toFixed(3))},5e3);for(var n=document.querySelectorAll("[data-href]"),l=0;l<n.length;l++)n[l].addEventListener("click",function(){window.location.hash="#"+this.dataset.href,document.querySelector("#".concat(this.dataset.href)).scrollIntoView({behavior:"smooth",block:"start",inline:"nearest"})});for(var r=document.querySelectorAll(".like"),i=0;i<r.length;i++)r[i].addEventListener("click",function(){this.classList.contains("like--down")?(this.classList.remove("like--down"),this.innerText=--this.innerText):(this.classList.add("like--down"),this.innerText=++this.innerText)})});
+	</script>
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__top">
+			<div class="header__container">
+				<nav class="header__nav nav">
+
+					<a href="https://getillumis.com/" class="nav__logo">
+						<svg width="120" height="21" role="img" aria-label="logo">
+							<use href="img/sprite.svg#healthlife_logo"></use>
+						</svg>
+					</a>
+
+					<div class="nav__list-wrap">
+						<button class="nav__toggle" type="button">
+							<span class="visually-hidden">Menu</span>
+						</button>
+
+						<ul class="nav__list">
+							<li><a href="https://getillumis.com/">Health Conditions</a></li>
+							<li><a href="https://getillumis.com/">Discover</a></li>
+							<li><a href="https://getillumis.com/">Plan</a></li>
+							<li><a href="https://getillumis.com/">Connect</a></li>
+						</ul>
+					</div>
+
+					<button type="button" class="nav__subscribe">Subscribe</button>
+					<button type="button" class="nav__search">
+						<span class="visually-hidden">Search</span>
+					</button>
+				</nav>
+			</div>
+		</div>
+
+		<div class="header__bottom">
+			<div class="header__container">
+				<p class="header__green-text">Mental well-being</p>
+				<div class="header__scroll-list-wrap">
+					<button class="header__button-scroll-end" type="button">
+						<span class="visually-hidden">More</span>
+					</button>
+					<ul class="header__scroll-list">
+						<li><a href="https://getillumis.com/">Life</a></li>
+						<li><a href="https://getillumis.com/">Youth in Focus</a></li>
+						<li><a href="https://getillumis.com/">Mind &amp; Body</a></li>
+						<li><a href="https://getillumis.com/">Self-Care</a></li>
+						<li><a href="https://getillumis.com/">Conditions</a></li>
+						<li><a href="https://getillumis.com/">Therapy</a></li>
+						<li><a href="https://getillumis.com/">Parenting</a></li>
+						<li><a href="https://getillumis.com/">Crisis Support</a></li>
+					</ul>
+					<button class="header__button-scroll" type="button">
+						<span class="visually-hidden">More</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+		<div class="main__header container">
+			<h1>PMS is&nbsp;an&nbsp;experience <span class="db">that can be&nbsp;managed</span></h1>
+			<picture>
+				<source media="(min-width: 500px)" srcset="./img/img-1.jpg" width="1000" height="640">
+				<img src="./img/img-1@sm.jpg" alt="#" width="500" height="320">
+			</picture>
+			<p class="main__header-meta">
+				<span class="main__header-meta-t">
+					<script>
+						document.write((new Date).getFullYear() + ' ');
+						dtime(-3);
+					</script>, 08:49
+				</span>
+				<span class="main__header-meta-w">170,653</span>
+				<span class="main__header-meta-c" data-href="comments" role="link">21</span>
+				<button type="button" class="main__header-meta-h like">184</button>
+			</p>
+			<nav class="main__header-nav">
+				<ul class="main__header-nav-list">
+					<li>
+						<button role="link" type="button" data-href="symptoms">Symptoms</button>
+					</li>
+					<li>
+						<button role="link" type="button" data-href="treatment">Treatment</button>
+					</li>
+					<li>
+						<button role="link" type="button" data-href="safety">Safety</button>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+		<section>
+			<div class="container">
+				<p>
+					If&nbsp;you are tormented by&nbsp;an&nbsp;incessant desire to&nbsp;eat sweet, salty or&nbsp;fatty foods, everything around you is&nbsp;annoying, your head hurts, your stomach swells and you have absolutely no&nbsp;energy for your usual activities&nbsp;&mdash; say hi to&nbsp;premenstrual syndrome.
+				</p>
+				<p>
+					There are about 200 symptoms of&nbsp;PMS, and gynaecologists estimate that 90% of&nbsp;women experience at&nbsp;least one of&nbsp;them.
+				</p>
+				<p>
+					Alina Marsad, gynecologist-endocrinologist, head of&nbsp;the Family Health Academy, will explain how to&nbsp;you can forget about your PMS symptoms once and for all.
+				</p>
+				<picture>
+					<source media="(min-width: 500px)" srcset="./img/img-2.jpg" width="828" height="512">
+					<img src="./img/img-2@sm.jpg" alt="#" loading="lazy" width="500" height="309">
+				</picture>
+			</div>
+		</section>
+
+		<section id="symptoms">
+			<div class="container">
+				<p>
+					PMS is&nbsp;a&nbsp;natural female conditions that occurs in&nbsp;a&nbsp;cycle on&nbsp;a&nbsp;monthly basis. Some women may experience mild to&nbsp;almost no&nbsp;symptoms, while others may experience severe physical and emotional strain. There are many premenstrual symptoms, but they are usually divided into two groups:
+				</p>
+				<h3>
+					Psychological &amp;&nbsp;Behavioural:
+				</h3>
+				<ul>
+					<li>
+						mood swings, depression;
+					</li>
+					<li>
+						fatigue, weakness and irritability;
+					</li>
+					<li>
+						anxiety, emotional dysregulation;
+					</li>
+					<li>
+						cognitive decline, aggression, anger;
+					</li>
+					<li>
+						insomnia, increased appetite.
+					</li>
+				</ul>
+				<h3>
+					Physical:
+				</h3>
+				<ul>
+					<li>
+						pain in&nbsp;the mammary glands, lower abdomen, skin rash;
+					</li>
+					<li>
+						bloating, indigestion, weight gain (transient nature), swelling;
+					</li>
+					<li>
+						headaches, back pain;
+					</li>
+					<li>
+						muscle weakness;
+					</li>
+					<li>
+						incoordination, clumsiness.
+					</li>
+				</ul>
+				<picture>
+					<source media="(min-width: 500px)" srcset="./img/img-3.jpg" width="828" height="576">
+					<img src="./img/img-3@sm.jpg" alt="#" loading="lazy" width="500" height="348">
+				</picture>
+				<p>
+					What determines the severity of&nbsp;PMS? This condition is&nbsp;determined by several factors. Often, the onset and severity of&nbsp;PMS symptoms is affected by&nbsp;the activity of&nbsp;the hormone progesterone produced by&nbsp;the ovaries immediately after ovulation. But in&nbsp;most cases, PMS is&nbsp;a&nbsp;concern for women with a&nbsp;labile nervous system, prone to&nbsp;tension and stress. It&nbsp;is important to&nbsp;understand that stress hormones trigger the release of&nbsp;the hormone prolactin, which also causes PMS symptoms.
+				</p>
+			</div>
+		</section>
+
+		<section id="treatment">
+			<div class="container">
+				<h2>
+					What if&nbsp;PMS interferes with your daily life?
+				</h2>
+				<p>
+					Birth control drugs are usually prescribed for severe premenstrual syndrome. But first it&nbsp;is&nbsp;necessary to&nbsp;take tests and choose a&nbsp;remedy that normalizes hormonal levels. However, hormonal drugs are not the best option. They do&nbsp;not help with all symptoms of&nbsp;PMS, and do&nbsp;not fight depression and mood swings. Therefore, antidepressants are prescribed to&nbsp;relieve the symptoms of&nbsp;depression.
+				</p>
+				<p>
+					Women struggling with PMS often take several medications at&nbsp;once that suppress the symptoms. But this method is&nbsp;impractical, since the whole body muy suffer from such drug intake. But recently, after repeated research, a&nbsp;non-hormonal remedy has appeared that relieves all the symptoms of&nbsp;PMS naturally. It&nbsp;seems improbable, but biochemists have been working on&nbsp;this formula for PMS for several decades.
+				</p>
+				<img src="./img/img-4.jpg" alt="#" loading="lazy" width="516" height="480">
+				<p>
+					<a href="https://getillumis.com/">Illumis</a> is&nbsp;a&nbsp;natural product for maintaining and supporting women&rsquo;s wellbeing and getting rid of&nbsp;PMS symptoms in&nbsp;the most natural way posible. Its main ingredients are <a href="https://getillumis.com/">CBD and CBG</a>. These are cannabinoids obtained from the Cannabis sativa plant. They have long been known in medicine and do&nbsp;not have an&nbsp;intoxicating effect on&nbsp;the body, but poses strong therapeutic properties. It&nbsp;is&nbsp;the synergy of&nbsp;these components that helps get rid of&nbsp;PMS symptoms and improve women&rsquo;s wellbeing.
+				</p>
+				<div class="checklist">
+					<div class="checklist-inner">
+						<h3>
+							CBD and CBG:
+						</h3>
+						<ul>
+							<li>
+								Relieve muscle tension, spasms, pain, inflammation.
+							</li>
+							<li>
+								Increase concentration, give energy.
+							</li>
+							<li>
+								Do&nbsp;not excite the nervous system, improve mood, fight depression and remove its signs.
+							</li>
+							<li>
+								Fight pathogenic bacteria, restore damaged cells, and are a potential inhibitor of&nbsp;cancer.
+							</li>
+							<li>
+								Help strengthen bones and prevent osteoporosis.
+							</li>
+							<li>
+								Increase the activity of&nbsp;the brain mediator GABA, which inhibits pain, including migraines.
+							</li>
+							<li>
+								Stimulate the production of&nbsp;serotonin&nbsp;&mdash; the &lsquo;hormone of&nbsp;joy&rsquo;, which normalizes the psycho-emotional state and fights stress.
+							</li>
+							<li>
+								Prevent exacerbation of&nbsp;chronic diseases and their complications.
+							</li>
+						</ul>
+					</div>
+				</div>
+				<p>
+					These two compounds restore metabolic processes in&nbsp;the ovaries, which leads to&nbsp;the balancing of&nbsp;estrogen and progesterone production. Once in the body, they help balance cyclic fluctuations of&nbsp;sex hormones and reduce stress resulting from disrupted interaction between the endocrine and central nervous systems. Additional natural extracts in&nbsp;<a href="https://getillumis.com/">Illumis</a> also stabilise the balance of&nbsp;female hormones in&nbsp;the body, regulate menstrual cycle, and relieve pain. Passing through the gastrointestinal tract, the components of&nbsp;the natural oil do&nbsp;not break down, but penetrate through the cell membrane to&nbsp;the ovaries and regulate the cells. The product improves natural processes in&nbsp;the body and stimulate production of necessary hormones in&nbsp;all phases of&nbsp;the menstrual cycle.
+				</p>
+				<img src="./img/img-5.jpg" alt="#" loading="lazy" width="656" height="448">
+				<p id="safety">
+					Most importantly, <a href="https://getillumis.com/">Illumis</a> is&nbsp;completely safe. This was confirmed by&nbsp;tests carried out in&nbsp;independent laboratories, where the product received certificates of&nbsp;analysis (COA). If&nbsp;you experience severe PMS symptoms, you do&nbsp;not need to&nbsp;take antidepressants, antispasmodics, painkillers, or hormonal medication. All of&nbsp;them can have a&nbsp;negative impact on&nbsp;the reproductive system and the body as&nbsp;a&nbsp;whole. Illumis is&nbsp;currently the only available and safe remedy that fights PMS symptoms and improves women&rsquo;s wellbeing.
+				</p>
+				<img src="./img/img-6.jpg" alt="#" loading="lazy" width="656" height="720">
+				<p>
+					You can purchase <a href="https://getillumis.com/">Illumis</a> on&nbsp;the manufacturer&rsquo;s official website. You don&rsquo;t need a&nbsp;prescription from your doctor, as&nbsp;the product has no&nbsp;banned substances and is&nbsp;completely plant-based.
+				</p>
+				<div class="prod-wrap">
+					<img src="./img/prod.png" alt="#" loading="lazy" width="146" height="353">
+					<a href="https://getillumis.com/" class="button">Order Illumis</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="main__tag">
+			<div class="container">
+				<h2>
+					Tags
+				</h2>
+				<ul class="main__tag-list">
+					<li><a href="https://getillumis.com/" class="main__tag-link">PMS</a></li>
+					<li><a href="https://getillumis.com/" class="main__tag-link">Illumis</a></li>
+					<li><a href="https://getillumis.com/" class="main__tag-link">Hormones</a></li>
+					<li><a href="https://getillumis.com/" class="main__tag-link">CBD</a></li>
+					<li><a href="https://getillumis.com/" class="main__tag-link">Serotonin</a></li>
+					<li><a href="https://getillumis.com/" class="main__tag-link">CBG</a></li>
+					<li><a href="https://getillumis.com/" class="main__tag-link">Painkillers</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="comments" id="comments">
+			<div class="container">
+				<h2>
+					Comments <span>21</span>
+				</h2>
+			</div>
+
+			<ul class="comments__list comments__list-container">
+				<li>
+					<div class="comments__meta">
+						<div class="ava">
+							<img src="./img/ava-1.jpg" alt="#" width="48" height="48" loading="lazy">
+						</div>
+						<span class="comments__author">
+							Lora Newton
+						</span>
+						<span class="comments__time">09:20, <script>
+								dtime(-3)
+							</script></span>
+						<button type="button" class="comments__like like">23</button>
+					</div>
+					<p>
+						Thanks for the article! Ordered 4&nbsp;packs right away!
+					</p>
+				</li>
+
+				<li>
+					<div class="comments__meta">
+						<div class="ava">
+							<img src="./img/ava-2.jpg" alt="#" width="48" height="48" loading="lazy">
+						</div>
+						<span class="comments__author">
+							Hanna Wild
+						</span>
+						<span class="comments__time">10:40, <script>
+								dtime(-3)
+							</script></span>
+						<button type="button" class="comments__like like">1</button>
+					</div>
+					<p>
+						Has anyone tried&nbsp;it? Can you share your feedback pls?
+					</p>
+				</li>
+
+				<li>
+					<div class="comments__meta">
+						<div class="ava">
+							<img src="./img/ava-3.jpg" alt="#" width="48" height="48" loading="lazy">
+						</div>
+						<span class="comments__author">
+							Inesse Brown
+						</span>
+						<span class="comments__time">11:00, <script>
+								dtime(-3)
+							</script></span>
+						<button type="button" class="comments__like like">208</button>
+					</div>
+					<p>
+						Some people believe that the PMS problem is&nbsp;a&nbsp;fictional one. Honestly, a&nbsp;couple of&nbsp;years ago, I&nbsp;myself thought&nbsp;so, until&nbsp;I had a&nbsp;hormonal failure and&nbsp;I felt all the hardships of&nbsp;PMS. Pain, migraines, insomnia, depression, indigestion... I&nbsp;had no&nbsp;idea how to&nbsp;keep working because of&nbsp;the constant weakness and the feeling that&nbsp;I could faint at&nbsp;any moment. But now that I&rsquo;ve tried <a href="https://getillumis.com/">Illumis</a>, I&rsquo;ve forgotten what PMS is&nbsp;at&nbsp;all.
+					</p>
+				</li>
+
+				<li>
+					<div class="comments__meta">
+						<div class="ava">
+							<img src="./img/ava-4.jpg" alt="#" width="48" height="48" loading="lazy">
+						</div>
+						<span class="comments__author">
+							Nancy Trent
+						</span>
+						<span class="comments__time">11:20, <script>
+								dtime(-3)
+							</script></span>
+						<button type="button" class="comments__like like">163</button>
+					</div>
+					<p>
+						Excellent solution! After two months of&nbsp;taking <a href="https://getillumis.com/">Illumis</a>, I&nbsp;noticed a&nbsp;significant improvement in&nbsp;my&nbsp;condition and a&nbsp;decrease in&nbsp;anxiety and weakness.
+					</p>
+					<img src="./img/img-7.jpg" alt="#" width="280" height="280" loading="lazy">
+				</li>
+
+				<li>
+					<div class="comments__meta">
+						<div class="ava">
+							<img src="./img/ava-5.jpg" alt="#" width="48" height="48" loading="lazy">
+						</div>
+						<span class="comments__author">
+							Lawrence Galeb
+						</span>
+						<span class="comments__time">11:21, <script>
+								dtime(-2)
+							</script></span>
+						<button type="button" class="comments__like like">10</button>
+					</div>
+					<p>
+						I&nbsp;have a&nbsp;question. I&nbsp;visited my&nbsp;gynecologist a&nbsp;while ago and asked her about my&nbsp;severe PMS. I&nbsp;just wanted to&nbsp;relieve the symptoms and asked her about medications for this. The doctor explained that my&nbsp;hormonal levels were okay so&nbsp;she couldn&rsquo;t prescribe anything... I&nbsp;still suffer from PMS((( I&nbsp;can&rsquo;t live a&nbsp;normal life. Ladies, what kind of&nbsp;meds can work out for&nbsp;me? Or&nbsp;maybe you can recommend a&nbsp;good doctor?
+					</p>
+				</li>
+
+				<li>
+					<div class="comments__meta">
+						<div class="ava">
+							<img src="./img/ava-6.jpg" alt="#" width="48" height="48" loading="lazy">
+						</div>
+						<span class="comments__author">
+							Sandra Parkes
+						</span>
+						<span class="comments__time">15:00, <script>
+								dtime(-2)
+							</script></span>
+						<button type="button" class="comments__like like">89</button>
+					</div>
+					<p>
+						Girls, I&nbsp;have the same problem: (I&rsquo;m so&nbsp;tired... It&rsquo;s just 10-11 days before periods and my&nbsp;body temperature is&nbsp;37-37.2. I&rsquo;m exhausted, my&nbsp;face is&nbsp;burning, I&nbsp;have nausea. In&nbsp;addition, it&rsquo;s my&nbsp;third period that&nbsp;I have itching in&nbsp;there... What&rsquo;s wrong with&nbsp;me? I&rsquo;ve been suffering from severe PMS for about three years already. All the tests are good. My&nbsp;hormone levels are fine, I&nbsp;have no&nbsp;infections, biochemistry, ultrasound, everything is&nbsp;normal. What should I&nbsp;do!?
+					</p>
+					<img src="./img/img-8.jpg" alt="#" width="280" height="280" loading="lazy">
+				</li>
+
+				<li>
+					<div class="comments__meta">
+						<div class="ava">
+							<img src="./img/ava-7.jpg" alt="#" width="48" height="48" loading="lazy">
+						</div>
+						<span class="comments__author">
+							Alice Spears
+						</span>
+						<span class="comments__time">15:23, <script>
+								dtime(-2)
+							</script></span>
+						<button type="button" class="comments__like like">89</button>
+					</div>
+					<p>
+						GPMS was my&nbsp;nightmare... A&nbsp;week before the start of&nbsp;my&nbsp;periods, I&nbsp;had strong causeless hunger and mood swings, which were accompanied by&nbsp;tearfulness, irritability, and impatience. I&nbsp;felt broken... I&nbsp;was energetic in&nbsp;the morning, but in&nbsp;about two or&nbsp;three hours after waking&nbsp;up, wild weakness set&nbsp;in. I&nbsp;could not lift my&nbsp;limbs or&nbsp;get out of&nbsp;bed. I&nbsp;struggled with PMS for many years, but nothing helped. Recently I&nbsp;went to&nbsp;a&nbsp;good specialist and she recommended that&nbsp;I should try this remedy. I&nbsp;didn&rsquo;t really believe&nbsp;it, because&nbsp;I tried a&nbsp;lot of&nbsp;things in&nbsp;my&nbsp;life, but a&nbsp;miracle did happen! PMS symptoms are gone! Be&nbsp;sure to&nbsp;give it&nbsp;a&nbsp;try too...
+					</p>
+				</li>
+
+				<li>
+					<div class="comments__meta">
+						<div class="ava">
+							<img src="./img/ava-8.jpg" alt="#" width="48" height="48" loading="lazy">
+						</div>
+						<span class="comments__author">
+							Lainey Beri
+						</span>
+						<span class="comments__time">16:20, <script>
+								dtime(-2)
+							</script></span>
+						<button type="button" class="comments__like like">89</button>
+					</div>
+					<p>
+						I&nbsp;don&rsquo;t get stomach pain during PMS, but&nbsp;I wake up&nbsp;with a&nbsp;headache and go&nbsp;to&nbsp;sleep with&nbsp;it. This condition lasts until the end of&nbsp;my&nbsp;period. I&nbsp;take about 3-4 painkillers a&nbsp;day in&nbsp;order to&nbsp;function normally. Living like this is&nbsp;impossible... I&rsquo;m so&nbsp;exhausted. I&rsquo;ll order it&nbsp;too!
+					</p>
+				</li>
+
+				<li>
+					<div class="comments__meta">
+						<div class="ava">
+							<img src="./img/ava-9.jpg" alt="#" width="48" height="48" loading="lazy">
+						</div>
+						<span class="comments__author">
+							Nicky Williams
+						</span>
+						<span class="comments__time">18:10, <script>
+								dtime(-2)
+							</script></span>
+						<button type="button" class="comments__like like">89</button>
+					</div>
+					<p>
+						Be&nbsp;sure to&nbsp;try this remedy! After I&nbsp;started taking <a href="https://getillumis.com/">Illumis</a>, I&rsquo;ve noticed an&nbsp;improvement in&nbsp;my&nbsp;emotional state and physical condition. Fatigue, pain in&nbsp;the lower abdomen, pulling sensations are gone. My&nbsp;sleep is&nbsp;back to&nbsp;normal and I&nbsp;no longer want to&nbsp;eat too much fatty and sugary foods during my&nbsp;PMS and periods.
+					</p>
+				</li>
+
+				<li>
+					<div class="comments__meta">
+						<div class="ava">
+							<img src="./img/ava-10.jpg" alt="#" width="48" height="48" loading="lazy">
+						</div>
+						<span class="comments__author">
+							Barbara Jay
+						</span>
+						<span class="comments__time">19:37, <script>
+								dtime(-2)
+							</script></span>
+						<button type="button" class="comments__like like">89</button>
+					</div>
+					<p>
+						I&rsquo;ve been taking it&nbsp;for one week now, I&rsquo;m happy so&nbsp;far! I&nbsp;no longer feel broken and&nbsp;I don&rsquo;t want to&nbsp;cry and kill people around:)
+					</p>
+				</li>
+
+				<li>
+					<div class="comments__meta">
+						<div class="ava">
+							<img src="./img/ava-11.jpg" alt="#" width="48" height="48" loading="lazy">
+						</div>
+						<span class="comments__author">
+							Milly Angel
+						</span>
+						<span class="comments__time">22:20, <script>
+								dtime(-2)
+							</script></span>
+						<button type="button" class="comments__like like">89</button>
+					</div>
+					<p>
+						Thanks for the article! Ordered <a href="https://getillumis.com/">Illumis</a> for myself, my&nbsp;sister and friends. Can&rsquo;t wait to&nbsp;get the parcel.
+					</p>
+				</li>
+
+				<li>
+					<div class="comments__meta">
+						<div class="ava">
+							<img src="./img/ava-12.jpg" alt="#" width="48" height="48" loading="lazy">
+						</div>
+						<span class="comments__author">
+							Sophia Collins
+						</span>
+						<span class="comments__time">00:20, <script>
+								dtime(-1)
+							</script></span>
+						<button type="button" class="comments__like like">89</button>
+					</div>
+					<p>
+						In&nbsp;addition to&nbsp;the classic manifestations of&nbsp;periods, such as&nbsp;cramps in&nbsp;the lower abdomen or&nbsp;tearfulness, I&nbsp;have an&nbsp;eating disorder during PMS. Previously, I&nbsp;tried to&nbsp;take antidepressants along with vitamins and painkillers, but their effects only worsened my&nbsp;emotional state, so&nbsp;my&nbsp;doctor canceled them. I&nbsp;don&rsquo;t know what would have happened if&nbsp;I hadn&rsquo;t tried <a href="https://getillumis.com/">Illumis</a>. This natural remedy is&nbsp;a&nbsp;miracle and has completely relieved me&nbsp;of&nbsp;those terrible symptoms!
+					</p>
+				</li>
+			</ul>
+
+			<div class="container">
+				<div class="prod-wrap">
+					<a href="https://getillumis.com/" class="button">Order Illumis</a>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="continue">
+			<div class="container">
+				<h2>
+					Continue reading
+				</h2>
+				<ul class="continue__list">
+					<li>
+						<a href="https://getillumis.com/" class="continue__link">
+							<img src="./img/continue-1.jpg" alt="#" width="280" height="175" loading="lazy">
+							<h3>Medicinal Cannabis Helps Cancer Pain</h3>
+							<p>
+								<script>
+									dtime(-5)
+								</script> • 53 comments
+							</p>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://getillumis.com/" class="continue__link">
+							<img src="./img/continue-2.jpg" alt="#" width="280" height="175" loading="lazy">
+							<h3>14 PMS Life Hacks to Beat the Bloat</h3>
+							<p>
+								<script>
+									dtime(-9)
+								</script> • 304 comments
+							</p>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://getillumis.com/" class="continue__link">
+							<img src="./img/continue-3.jpg" alt="#" width="280" height="175" loading="lazy">
+							<h3>8 PMS Comments We Never Want to Hear</h3>
+							<p>
+								<script>
+									dtime(-12)
+								</script> • 51 comments
+							</p>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://getillumis.com/" class="continue__link">
+							<img src="./img/continue-4.jpg" alt="#" width="280" height="175" loading="lazy">
+							<h3>Detox. A General Cleaning of the Body</h3>
+							<p>
+								<script>
+									dtime(-20)
+								</script> • 97 comments
+							</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+
+		<div class="footer__container">
+			<div>
+				<a href="https://getillumis.com/" class="footer__logo">
+					<img src="./img/logo-footer.svg" alt="#" width="26" height="26" loading="lazy">
+					Healthlife Media
+				</a>
+			</div>
+			<p>
+				© 2023 Healthlife Media LLC. All rights reserved. Our website services, content, and products are for informational purposes only. Healthlife Media does not provide medical advice, diagnosis, or treatment. <a href="https://getillumis.com/">See additional information.</a>
+			</p>
+		</div>
+
+		<div class="footer__line"></div>
+
+		<div class="footer__container">
+			<ul class="footer__list">
+				<li><a href="https://getillumis.com/">About Us</a></li>
+				<li><a href="https://getillumis.com/">Contact Us</a></li>
+				<li><a href="https://getillumis.com/">Privacy Policy</a></li>
+				<li><a href="https://getillumis.com/">Privacy Settings</a></li>
+				<li><a href="https://getillumis.com/">Advertising Policy</a></li>
+				<li><a href="https://getillumis.com/">Medical Affairs</a></li>
+				<li><a href="https://getillumis.com/">Content Integrity</a></li>
+				<li><a href="https://getillumis.com/">Newsletters</a></li>
+			</ul>
+		</div>
+
+		<div class="footer__line"></div>
+
+		<div class="footer__container">
+			<ul class="footer__social">
+				<li>
+					<a href="https://getillumis.com/" class="footer__social-link footer__social-link--tiktok">
+						<span class="visually-hidden">tiktok</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://getillumis.com/" class="footer__social-link footer__social-link--instagram">
+						<span class="visually-hidden">instagram</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://getillumis.com/" class="footer__social-link footer__social-link--tg">
+						<span class="visually-hidden">telegram</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://getillumis.com/" class="footer__social-link footer__social-link--youtube">
+						<span class="visually-hidden">youtube</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://getillumis.com/" class="footer__social-link footer__social-link--flipboard">
+						<span class="visually-hidden">flipboard</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://getillumis.com/" class="footer__social-link footer__social-link--fb">
+						<span class="visually-hidden">facebook</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+</body>
+
+</html>
